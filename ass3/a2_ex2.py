@@ -14,7 +14,7 @@ def prepare_image(
 
     invalid_operation = image.shape[0] != 1 or image.shape[0] != 1 \
         or len(image.shape) != 3 or width < 2 or height < 2 or size < 2 \
-        or x + width > image.shape[1] or y + height > image.shape[2] or x < 0 or y < 0
+        or x + width > image.shape[2] or y + height > image.shape[1] or x < 0 or y < 0
     
     if invalid_operation:
         print(f"check failed!", flush=True)
