@@ -16,7 +16,7 @@ if __name__ == "__main__":
     #get a single sample from fullds
     #remember we need to turn this manually into tensors and squeeze
     #since we are no longer using tensors
-    pixelated_image, known_array, target_array, image_file = full_ds[302]
+    pixelated_image, known_array, target_array, image_file = full_ds[8]
     prepped_input = torch.cat([torch.tensor(pixelated_image), 
     torch.tensor(known_array)], dim=0).float().unsqueeze(0)
    
