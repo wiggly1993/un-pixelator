@@ -2,19 +2,7 @@ import torch
 import matplotlib.pyplot as plt
 
 from a3_ex1 import RandomImagePixelationDataset
-from a3_ex2 import stack_with_padding
 from a6_ex1 import UNet
-
-
-
-# with everything prepared i now want to send this single sample through the network and visualise
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
@@ -40,8 +28,6 @@ if __name__ == "__main__":
 
     output = trained_CNN(prepped_input)
     print(output.shape)
-
-
 
 
     fig, axes = plt.subplots(1, 2, figsize=(8, 4))
