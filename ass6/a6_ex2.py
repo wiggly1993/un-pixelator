@@ -122,8 +122,8 @@ def training_loop(
             pass
 
 
-        if len(epoch_val_loss) > 1 and epoch_val_loss[-1] < min(epoch_val_loss[:-1]):
-            torch.save(network.state_dict(), "./ass6/best_model.pth")
+        # if len(epoch_val_loss) > 1 and epoch_val_loss[-1] < min(epoch_val_loss[:-1]):
+        #     torch.save(network.state_dict(), "./ass6/best_model.pth")
                 
 
     return (epoch_train_loss, epoch_val_loss)

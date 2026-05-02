@@ -7,7 +7,7 @@ from a6_ex1 import UNet
 
 if __name__ == "__main__":
 
-    grey_images_path = "./ass6/grey_training"
+    grey_images_path = "./ass6/grey_training_later"
     saved_model_path = "./ass6/best_model.pth"
 
     full_ds = RandomImagePixelationDataset(image_dir=grey_images_path, width_range=(4,32), 
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     #get a single sample from fullds
     #remember we need to turn this manually into tensors and squeeze
     #since we are no longer using tensors
-    pixelated_image, known_array, target_array, image_file = full_ds[8]
+    pixelated_image, known_array, target_array, image_file = full_ds[5]
     prepped_input = torch.cat([torch.tensor(pixelated_image), 
     torch.tensor(known_array)], dim=0).float().unsqueeze(0)
    
